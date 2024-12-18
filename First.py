@@ -1,6 +1,14 @@
-group1 = [3, 4, 2, 1, 3, 3]
-group2 = [4, 3, 5, 3, 9, 3]
-
+with open ('day1_input.txt', 'r') as f:
+    ints1 = []
+    ints2 = []
+    line = f.readline()
+    while line != '':
+        a = (line.strip().split('   ')[0])
+        b = (line.strip().split('   ')[1])
+        ints1.append(int(a))
+        ints2.append(int(b))
+        line = f.readline()
+    
 
 def distance_lists(list1, list2):
     list1.sort()
@@ -11,7 +19,7 @@ def distance_lists(list1, list2):
     return distance
 
 def main():
-    print(distance_lists(group1, group2))
+    print(distance_lists(ints1, ints2))
 
 
 if __name__ == "__main__":
