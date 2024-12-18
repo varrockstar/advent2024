@@ -18,8 +18,18 @@ def distance_lists(list1, list2):
         distance += abs(list1[x] - list2[x])
     return distance
 
+def similarity_score(list1, list2):
+    similarity = 0
+    for i in list1:
+        similarity += (i*list2.count(i))
+    return similarity
+        
+
+
+
 def main():
     print(distance_lists(ints1, ints2))
+    print(similarity_score(ints1, ints2))
 
 
 if __name__ == "__main__":
